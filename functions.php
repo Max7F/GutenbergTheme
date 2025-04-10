@@ -32,7 +32,7 @@ function wpdocs_enqueue_custom_admin_style() {
 add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );
 
 function include_wp_style(){
-    require_once get_template_directory() . '/template-parts/css-parts/gutenberg-css.php';
+    require_once get_template_directory() . '/template-parts/css-parts/gutenberg-style.php';
     require_once get_template_directory() . '/template-parts/css-parts/general-css.php';
 }
 add_action( 'admin_head', 'include_wp_style' );

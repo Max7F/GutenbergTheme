@@ -1,59 +1,41 @@
 <style>
-    .editor-sidebar .acf-field-6672bf6506508 .acf-button-group{
-        flex-direction: column;
+    body .theme-browser .theme .theme-name{
+        height: auto;
     }
-    body.block-editor-page{
-        font-weight: 400;
-    }
-    .editor-sidebar .acf-field-6672bf6506508 .acf-button-group label:not(:last-child){
-        margin-bottom: 10px;
-    }
-	body .theme-browser .theme .theme-name{
-		height: auto;
-	}
     .wp-block-post-content h1 {
-        font: 700 48px/1.35 var(--font);
-        color: var(--title_color);
-        margin: 0;
+        font: 700 42px/1.2 var(--font_title);
     }
     .wp-block-post-content h2 {
-        font: 700 30px var(--font);
+        font: 500 52px/1.25 var(--font);
         color: var(--title_color);
-        margin: 0;
+        text-align: center;
     }
     .wp-block-post-content h3 {
-        font: 700 28px var(--font);
+        font: 400 24px var(--font);
         color: var(--title_color);
-        margin: 0;
     }
     .wp-block-post-content h4 {
-        font: 700 22px var(--font);
+        font: 400 28px var(--font);
         color: var(--title_color);
-        margin: 0;
+        font-weight: 700;
     }
     .wp-block-post-content h5 {
-        font: 700 18px var(--font);
+        font: 400 24px var(--font);
         color: var(--title_color);
-        margin: 0;
     }
     .wp-block-post-content h6 {
-        font: 700 16px var(--font);
+        font: 400 18px var(--font_title);
         color: var(--title_color);
-        margin: 0;
     }
-
     @media(max-width: 767px) {
         .wp-block-post-content h1 {
-            font-size: 32px;
+            font-size: 24px;
         }
         .wp-block-post-content h2 {
             font-size: 24px;
         }
         .wp-block-post-content h3 {
-            font-size: 24px;
-        }
-        .wp-block-post-content h4 {
-            font-size: 22px;
+            font-size: 18px;
         }
     }
 
@@ -108,12 +90,10 @@
         max-width: 100%;
         padding: 0 15px;
     }
-	.acf-button-group{
-        flex-direction: unset;
-        flex-wrap: wrap;
-    }
-    .acf-button-group label{
-        white-space: unset;
+    .acf-field[data-type="textarea"] textarea{
+        box-shadow: 0 0 0 transparent;
+        border-radius: 4px;
+        border: 1px solid #8c8f94;
     }
     /*End Standart Settings*/
 

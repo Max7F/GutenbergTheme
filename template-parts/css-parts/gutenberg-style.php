@@ -2,43 +2,16 @@
     body .theme-browser .theme .theme-name{
         height: auto;
     }
-    .wp-block-post-content h1 {
-        font: 700 42px/1.2 var(--font_title);
+    .editor-sidebar__panel .acf-button-group{
+        flex-direction: column;
     }
-    .wp-block-post-content h2 {
-        font: 500 52px/1.25 var(--font);
-        color: var(--title_color);
-        text-align: center;
+    .editor-sidebar__panel .acf-button-group label:not(:last-child){
+        margin-bottom: 10px;
     }
-    .wp-block-post-content h3 {
-        font: 400 24px var(--font);
-        color: var(--title_color);
+    .block-editor .wp-block {
+        max-width: 100%;
+        padding: 0 15px;
     }
-    .wp-block-post-content h4 {
-        font: 400 28px var(--font);
-        color: var(--title_color);
-        font-weight: 700;
-    }
-    .wp-block-post-content h5 {
-        font: 400 24px var(--font);
-        color: var(--title_color);
-    }
-    .wp-block-post-content h6 {
-        font: 400 18px var(--font_title);
-        color: var(--title_color);
-    }
-    @media(max-width: 767px) {
-        .wp-block-post-content h1 {
-            font-size: 24px;
-        }
-        .wp-block-post-content h2 {
-            font-size: 24px;
-        }
-        .wp-block-post-content h3 {
-            font-size: 18px;
-        }
-    }
-
     .block-editor__container .banner img{
         height: 100%;
     }

@@ -1,20 +1,64 @@
 <style>
     /*Start Settings*/
     :root {
-        --main_color: #3F9ED8;
+        --main_color: #BFA87F;
         --second_color: #1C1C22;
         --hover_color: #000;
         --second_hover_color: #fff;
-        --title_color: #121212;
-        --text_color: #808080;
+        --title_color: #48443B;
+        --text_color: #162E3A;
         --bg_color: #F7F6F4;
-        --font: "Lexend", sans-serif;
+        --font: 'Your Font';
     }
-
     body{
-        font: 400 16px/1.5 var(--font);
+        font: 400 18px/1.33 var(--font);
         color: var(--text_color);
         margin: 0;
+    }
+    h1 {
+        font: 500 42px var(--font_title);
+        color: var(--title_color);
+    }
+    h2 {
+        font: 500 34px var(--font_title);
+        color: var(--title_color);
+    }
+    h3 {
+        font: 400 24px var(--font_title);
+        color: var(--title_color);
+    }
+    h4 {
+        font: 400 28px var(--font_title);
+        color: var(--title_color);
+        font-weight: 700;
+    }
+    h5 {
+        font: 400 24px var(--font_title);
+        color: var(--title_color);
+    }
+    h6 {
+        font: 400 18px var(--font_title);
+        color: var(--title_color);
+    }
+    @media(max-width: 767px) {
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        body {
+            font-size: 14px;
+        }
+    }
+    .container{
+        width: 100%;
+        padding: 0 10px;
+        margin: 0 auto;
+        max-width: 1160px;
     }
     .button_basic{
         padding: 12px 40px;

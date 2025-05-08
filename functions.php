@@ -31,7 +31,10 @@ function wpdocs_enqueue_custom_admin_style() {
 }
 add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );
 
-function include_wp_style(){
+function include_wp_style($hook_suffix){
+    if ($hook_suffix !== 'post.php' && $hook_suffix !== 'post-new.php') {
+        return;
+    }
     require_once get_template_directory() . '/template-parts/css-parts/gutenberg-style.php';
     require_once get_template_directory() . '/template-parts/css-parts/general-css.php';
 }

@@ -13,32 +13,32 @@ function enqueue_scripts() {
     wp_deregister_script( 'jquery' );
 
     wp_register_script( 'custom_js', get_stylesheet_directory_uri() . '/js/custom.js' );
-    wp_enqueue_script( 'custom_js' );   
-    
-    
+    wp_enqueue_script( 'custom_js' );
+
+
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts', 11);
 
-function wpdocs_enqueue_custom_admin_style() {
-
-    wp_register_script( 'swiper_js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
-    wp_enqueue_script( 'swiper_js' );
-
-    wp_register_style( 'custom_wp_admin_css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', false, '1.0.0' );
-    wp_enqueue_style( 'custom_wp_admin_css' );
-
-
-}
-add_action( 'admin_enqueue_scripts', 'wpdocs_enqueue_custom_admin_style' );
-
-function include_wp_style($hook_suffix){
-    if ($hook_suffix !== 'post.php' && $hook_suffix !== 'post-new.php') {
-        return;
-    }
-    require_once get_template_directory() . '/template-parts/css-parts/gutenberg-style.php';
+function my_frontend_styles() {
     require_once get_template_directory() . '/template-parts/css-parts/general-css.php';
 }
-add_action( 'admin_head', 'include_wp_style' );
+add_action('wp_enqueue_scripts', 'my_frontend_styles');
+
+function my_gutenberg_enqueue_swiper($hook) {
+    // Load Swiper only in block editor (post editing screens)
+    $is_gutenberg = function_exists('is_gutenberg_page') ? is_gutenberg_page() : false;
+
+    if (in_array($hook, ['post.php', 'post-new.php']) || $is_gutenberg) {
+        // Swiper CSS
+        include(get_theme_root().'/'.get_option('stylesheet').'/libraries/swiper/swiper_css.php');
+
+        // Swiper JS
+        include(get_theme_root().'/'.get_option('stylesheet').'/libraries/swiper/swiper_js.php');
+        require_once get_template_directory() . '/template-parts/css-parts/general-css.php';
+        require_once get_template_directory() . '/template-parts/css-parts/gutenberg-style.php';
+    }
+}
+add_action('admin_enqueue_scripts', 'my_gutenberg_enqueue_swiper');
 
 
 if ( function_exists('register_sidebar') )

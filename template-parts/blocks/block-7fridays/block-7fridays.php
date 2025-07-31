@@ -1,7 +1,5 @@
 <section class="main-section">
-    <style>
-        <?php include_once('block-7fridays.css'); ?>
-    </style>
+    <?php include_once('block-7fridays-css.php'); ?>
     <div class="container">
         <h1><?php echo get_field('title'); ?></h1>    
 
@@ -26,7 +24,5 @@
             <?php echo get_field('text'); ?>
         </article>
     </div>
-    <script>
-        <?php include_once('block-7fridays.js'); ?>
-    </script>
+    <?php include_once('block-7fridays-js.php'); ?>
 </section>  

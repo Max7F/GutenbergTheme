@@ -1,3 +1,4 @@
+<style>
 h1{
     font-size: 48px;
     color: #000;
@@ -16,3 +17,4 @@ h1{
 article{
     margin-top: 50px;
 }
+</style>

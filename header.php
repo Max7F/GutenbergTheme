@@ -12,20 +12,13 @@
     <!--<title><?php //wp_title('', true); ?></title>-->
     <!--=== WP_HEAD() ===-->
     <link rel="preload" href="<?php echo get_field('flexible_content')['0']['background_image']['url']; ?>" as="image">
-    <!-- <link rel="preload" href="/wp-content/uploads/2021/10/Andrew-Pelletier.svg" as="image"> -->
-    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
 
     <?php wp_head(); ?>
 </head>
-<?php
-//$query = get_field('flexible_content');
-//echo '<pre>',print_r($query,1),'</pre>';
-//?>
 
 <body <?php body_class(); ?>>
 <?php include( 'template-parts/css-parts/header-css.php' ); ?>
-<?php include( 'template-parts/css-parts/general-css.php' ); ?>
 <header>
     <div class="fixing">
         <div class="container">
@@ -52,5 +45,4 @@
             </div>
         </div><!--End container-fluid-->
     </div><!--End fixing-->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </header>

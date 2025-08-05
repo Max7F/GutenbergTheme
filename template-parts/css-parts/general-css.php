@@ -16,28 +16,27 @@
         margin: 0;
     }
     h1 {
-        font: 500 42px var(--font_title);
+        font: 500 42px var(--font);
         color: var(--title_color);
     }
     h2 {
-        font: 500 34px var(--font_title);
+        font: 500 34px var(--font);
         color: var(--title_color);
     }
     h3 {
-        font: 400 24px var(--font_title);
+        font: 400 24px var(--font);
         color: var(--title_color);
     }
     h4 {
-        font: 400 28px var(--font_title);
+        font: 400 28px var(--font);
         color: var(--title_color);
-        font-weight: 700;
     }
     h5 {
-        font: 400 24px var(--font_title);
+        font: 400 24px var(--font);
         color: var(--title_color);
     }
     h6 {
-        font: 400 18px var(--font_title);
+        font: 400 18px var(--font);
         color: var(--title_color);
     }
     @media(max-width: 767px) {
@@ -87,12 +86,6 @@
     ul,
     ol{
         list-style-position: inside;
-    }
-    .container{
-        width: 100%;
-        padding: 0 20px;
-        margin: 0 auto;
-        max-width: 1240px;
     }
     *,
     :after,
